@@ -31,7 +31,7 @@
           <section class="login_content">
               <h1>Sign in</h1>
 
-              <?php echo form_open('verifylogin'); ?>
+              <?php echo form_open('VerifyLogin'); ?>
 
               <?php echo validation_errors(); ?>
               <div>

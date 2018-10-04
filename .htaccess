@@ -2,7 +2,7 @@
 # such as an image or css document, if this isn’t true it sends the
 # request to index.php
 RewriteEngine on
-Rewritebase /gpscak/
+Rewritebase /gps-cak/
 RewriteCond $1 !^(index.php|resources|robot.txt)
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
