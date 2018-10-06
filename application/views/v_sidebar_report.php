@@ -11,15 +11,15 @@
     <ul class="nav side-menu">
       <li><a><i class="fa fa-bar-chart-o"></i> Operation Statistic<span class="fa fa-chevron-down"></span></a>
         <ul class="nav child_menu">
-          <li><a href="<?php echo site_url('report/manage_audit_plan')?>">Moving overview</a></li>
-          <li><a href="#"> Mileage report </a></li>
-          <li><a href="#"> Speeding details </a></li>
-          <li><a href="#"> Parking details </a></li>
-          <li><a href="#"> Engine overview </a></li>
-          <li><a href="#"> Engine report </a></li>
-          <li><a href="#"> Engine idle report </a></li>
-          <li><a href="#"> Trip Report </a></li>
-          <li><a href="#"> Speeding trip Report </a></li>
+          <li><a href="<?php echo site_url('report/movingOverview')?>">Moving overview</a></li>
+          <li><a href="<?php echo site_url('report/mileageReport') ?>"> Mileage report </a></li>
+          <li><a href="<?php echo site_url('report/speedingDetails')?>"> Speeding details </a></li>
+          <li><a href="<?php echo site_url('report/parkingDetails')?>"> Parking details </a></li>
+          <li><a href="<?php echo site_url('report/engineOverview')?>"> Engine overview </a></li>
+          <li><a href="<?php echo site_url('report/engineReport')?>"> Engine report </a></li>
+          <li><a href="<?php echo site_url('report/engineIdleReport')?>"> Engine idle report </a></li>
+          <li><a href="<?php echo site_url('report/tripReport')?>"> Trip Report </a></li>
+          <li><a href="<?php echo site_url('report/speedingTripReport')?>"> Speeding trip Report </a></li>
         </ul>
       </li>
       <li><a><i class="fa fa-check-circle-o"></i> OBD Report<span class="fa fa-chevron-down"></span></a>

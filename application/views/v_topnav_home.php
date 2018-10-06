@@ -7,7 +7,7 @@
       </div>
       <ul class="nav navbar-nav">
       <li class="active"><a href="<?php echo site_url('home') ?>">Monitor</a></li>
-      <li><a href="<?php echo site_url('report/manage_audit_plan')?>">Report</a></li>
+      <li><a href="<?php echo site_url('report')?>">Report</a></li>
       <li><a href="#contact">Device</a></li>
 
     </ul>
