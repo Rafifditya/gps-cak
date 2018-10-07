@@ -69,7 +69,7 @@ class Report extends CI_Controller {
 
               $this->load->view('v_mileage_report', $data);
     }
-    function speedingDetails(){
+    function speedingDetail(){
 
               $session_data = $this->session->userdata('logged_in');
 
@@ -83,12 +83,162 @@ class Report extends CI_Controller {
 
               $this->load->view('v_speeding_detail', $data);
     }
-    function parkingDetails(){}
-    function engineOverview(){}
-    function engineReport(){}
-    function engineIdleReport(){}
-    function tripReport(){}
-    function speedingTripReport(){}
+
+    function parkingDetails(){
+      $session_data = $this->session->userdata('logged_in');
+
+      if(!$this->session->userdata('logged_in'))
+          redirect(base_url().'login', 'refresh');
+
+      $data['sess_name'] = $session_data['name'];
+      $data['sess_unit'] = $session_data['unit'];
+      $data['sess_position'] = $session_data['position'];
+      $data['sess_image'] = $session_data['image'];
+
+      $this->load->view('v_parking_details', $data);
+
+    }
+    function engineOverview(){
+      $session_data = $this->session->userdata('logged_in');
+
+      if(!$this->session->userdata('logged_in'))
+          redirect(base_url().'login', 'refresh');
+
+      $data['sess_name'] = $session_data['name'];
+      $data['sess_unit'] = $session_data['unit'];
+      $data['sess_position'] = $session_data['position'];
+      $data['sess_image'] = $session_data['image'];
+
+      $this->load->view('v_engine_overview', $data);
+
+    }
+    function engineReport(){
+
+        $session_data = $this->session->userdata('logged_in');
+
+        if(!$this->session->userdata('logged_in'))
+            redirect(base_url().'login', 'refresh');
+
+        $data['sess_name'] = $session_data['name'];
+        $data['sess_unit'] = $session_data['unit'];
+        $data['sess_position'] = $session_data['position'];
+        $data['sess_image'] = $session_data['image'];
+
+        $this->load->view('v_engine_report', $data);
+
+    }
+    function engineIdleReport(){
+      $session_data = $this->session->userdata('logged_in');
+
+      if(!$this->session->userdata('logged_in'))
+          redirect(base_url().'login', 'refresh');
+
+      $data['sess_name'] = $session_data['name'];
+      $data['sess_unit'] = $session_data['unit'];
+      $data['sess_position'] = $session_data['position'];
+      $data['sess_image'] = $session_data['image'];
+
+      $this->load->view('v_engine_idle_report', $data);
+
+    }
+    function tripReport(){
+      $session_data = $this->session->userdata('logged_in');
+
+      if(!$this->session->userdata('logged_in'))
+          redirect(base_url().'login', 'refresh');
+
+      $data['sess_name'] = $session_data['name'];
+      $data['sess_unit'] = $session_data['unit'];
+      $data['sess_position'] = $session_data['position'];
+      $data['sess_image'] = $session_data['image'];
+
+      $this->load->view('v_trip_report', $data);
+
+    }
+    function speedingTripReport(){
+      $session_data = $this->session->userdata('logged_in');
+
+      if(!$this->session->userdata('logged_in'))
+          redirect(base_url().'login', 'refresh');
+
+      $data['sess_name'] = $session_data['name'];
+      $data['sess_unit'] = $session_data['unit'];
+      $data['sess_position'] = $session_data['position'];
+      $data['sess_image'] = $session_data['image'];
+
+      $this->load->view('v_speeding_trip_report', $data);
+    }
+
+    function drivingBehaviorOverview(){
+      $session_data = $this->session->userdata('logged_in');
+
+      if(!$this->session->userdata('logged_in'))
+          redirect(base_url().'login', 'refresh');
+
+      $data['sess_name'] = $session_data['name'];
+      $data['sess_unit'] = $session_data['unit'];
+      $data['sess_position'] = $session_data['position'];
+      $data['sess_image'] = $session_data['image'];
+
+      $this->load->view('v_driving_behavior_overview', $data);
+    }
+    function drivingBehaviorReport(){
+      $session_data = $this->session->userdata('logged_in');
+
+      if(!$this->session->userdata('logged_in'))
+          redirect(base_url().'login', 'refresh');
+
+      $data['sess_name'] = $session_data['name'];
+      $data['sess_unit'] = $session_data['unit'];
+      $data['sess_position'] = $session_data['position'];
+      $data['sess_image'] = $session_data['image'];
+
+      $this->load->view('v_driving_behavior_report', $data);
+    }
+    function drivingBehaviorDetails(){
+      $session_data = $this->session->userdata('logged_in');
+
+      if(!$this->session->userdata('logged_in'))
+          redirect(base_url().'login', 'refresh');
+
+      $data['sess_name'] = $session_data['name'];
+      $data['sess_unit'] = $session_data['unit'];
+      $data['sess_position'] = $session_data['position'];
+      $data['sess_image'] = $session_data['image'];
+
+      $this->load->view('v_driving_behavior_details', $data);
+
+    }
+    function tripFuelConsumptionOverview(){
+        $session_data = $this->session->userdata('logged_in');
+
+        if(!$this->session->userdata('logged_in'))
+            redirect(base_url().'login', 'refresh');
+
+        $data['sess_name'] = $session_data['name'];
+        $data['sess_unit'] = $session_data['unit'];
+        $data['sess_position'] = $session_data['position'];
+        $data['sess_image'] = $session_data['image'];
+
+        $this->load->view('v_trip_fuel_consumption_overview', $data);
+
+    }
+    function tripFuelConsumptionDetails(){
+        $session_data = $this->session->userdata('logged_in');
+
+        if(!$this->session->userdata('logged_in'))
+            redirect(base_url().'login', 'refresh');
+
+        $data['sess_name'] = $session_data['name'];
+        $data['sess_unit'] = $session_data['unit'];
+        $data['sess_position'] = $session_data['position'];
+        $data['sess_image'] = $session_data['image'];
+
+        $this->load->view('v_trip_fuel_consumption_detail', $data);
+    }
+    function DTCreport(){}
+
+
 
 
 

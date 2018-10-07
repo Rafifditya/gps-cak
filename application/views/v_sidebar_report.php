@@ -13,7 +13,7 @@
         <ul class="nav child_menu">
           <li><a href="<?php echo site_url('report/movingOverview')?>">Moving overview</a></li>
           <li><a href="<?php echo site_url('report/mileageReport') ?>"> Mileage report </a></li>
-          <li><a href="<?php echo site_url('report/speedingDetails')?>"> Speeding details </a></li>
+          <li><a href="<?php echo site_url('report/speedingDetail')?>"> Speeding details </a></li>
           <li><a href="<?php echo site_url('report/parkingDetails')?>"> Parking details </a></li>
           <li><a href="<?php echo site_url('report/engineOverview')?>"> Engine overview </a></li>
           <li><a href="<?php echo site_url('report/engineReport')?>"> Engine report </a></li>
@@ -24,12 +24,12 @@
       </li>
       <li><a><i class="fa fa-check-circle-o"></i> OBD Report<span class="fa fa-chevron-down"></span></a>
         <ul class="nav child_menu">
-          <li><a href="#"> Driving behavior overview </a></li>
-          <li><a href="#"> Driving behavior report </a></li>
-          <li><a href="#"> Driving behavior details </a></li>
-          <li><a href="#"> Trip fuel consumption overview </a></li>
-          <li><a href="#"> Trip fuel consumption details </a></li>
-          <li><a href="#"> DTC report </a></li>
+          <li><a href="<?php echo site_url('report/drivingBehaviorOverview')?>"> Driving behavior overview </a></li>
+          <li><a href="<?php echo site_url('report/drivingBehaviorReport')?>"> Driving behavior report </a></li>
+          <li><a href="<?php echo site_url('report/drivingBehaviorDetails')?>"> Driving behavior details </a></li>
+          <li><a href="<?php echo site_url('report/tripFuelConsumptionOverview')?>"> Trip fuel consumption overview </a></li>
+          <li><a href="<?php echo site_url('report/tripFuelConsumptionDetails')?>"> Trip fuel consumption details </a></li>
+          <li><a href="<?php echo site_url('report/DTCreport')?>"> DTC report </a></li>
         </ul>
       </li>
       <li><a><i class="fa fa-comment-o"></i> Alert Report<span class="fa fa-chevron-down"></span></a>
