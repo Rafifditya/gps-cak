@@ -6,9 +6,9 @@
         <a id="menu_toggle"><i class="fa fa-bars"></i></a>
       </div>
       <ul class="nav navbar-nav">
-      <li class="active"><a href="<?php echo site_url('home') ?>">Monitor</a></li>
-      <li><a href="<?php echo site_url('report')?>">Report</a></li>
-      <li><a href="#contact">Device</a></li>
+      <li class="active"><a href="<?php echo site_url('Home') ?>">Monitor</a></li>
+      <li><a href="<?php echo site_url('Report')?>">Report</a></li>
+      <li><a href="<?php echo site_url('Device')?>">Device</a></li>
 
     </ul>
       <ul class="nav navbar-nav navbar-right">

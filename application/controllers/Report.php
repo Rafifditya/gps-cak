@@ -30,11 +30,11 @@ class Report extends CI_Controller {
         if(!$session_data)
         {
           $this->logout();
-          redirect(base_url().'login', 'refresh');
+          redirect(base_url().'Login', 'refresh');
         }
         else
         {
-          redirect(base_url().'report/movingOverview', 'refresh');
+          redirect(base_url().'Report/movingOverview', 'refresh');
          //Jika tidak ada session di kembalikan ke halaman login
         }
     }
@@ -236,7 +236,63 @@ class Report extends CI_Controller {
 
         $this->load->view('v_trip_fuel_consumption_detail', $data);
     }
-    function DTCreport(){}
+    function dtcReport(){
+        $session_data = $this->session->userdata('logged_in');
+
+        if(!$this->session->userdata('logged_in'))
+            redirect(base_url().'login', 'refresh');
+
+        $data['sess_name'] = $session_data['name'];
+        $data['sess_unit'] = $session_data['unit'];
+        $data['sess_position'] = $session_data['position'];
+        $data['sess_image'] = $session_data['image'];
+
+        $this->load->view('v_dtc_report', $data);
+
+    }
+
+    function alertOverview(){
+        $session_data = $this->session->userdata('logged_in');
+
+        if(!$this->session->userdata('logged_in'))
+            redirect(base_url().'login', 'refresh');
+
+        $data['sess_name'] = $session_data['name'];
+        $data['sess_unit'] = $session_data['unit'];
+        $data['sess_position'] = $session_data['position'];
+        $data['sess_image'] = $session_data['image'];
+
+        $this->load->view('v_alert_overview', $data);
+
+    }
+    function alertReport(){
+        $session_data = $this->session->userdata('logged_in');
+
+        if(!$this->session->userdata('logged_in'))
+            redirect(base_url().'login', 'refresh');
+
+        $data['sess_name'] = $session_data['name'];
+        $data['sess_unit'] = $session_data['unit'];
+        $data['sess_position'] = $session_data['position'];
+        $data['sess_image'] = $session_data['image'];
+
+        $this->load->view('v_alert_report', $data);
+
+    }
+    function alertDetails(){
+        $session_data = $this->session->userdata('logged_in');
+
+        if(!$this->session->userdata('logged_in'))
+            redirect(base_url().'login', 'refresh');
+
+        $data['sess_name'] = $session_data['name'];
+        $data['sess_unit'] = $session_data['unit'];
+        $data['sess_position'] = $session_data['position'];
+        $data['sess_image'] = $session_data['image'];
+
+        $this->load->view('v_alert_details', $data);
+
+    }
 
 
 

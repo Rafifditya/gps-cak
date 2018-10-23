@@ -63,7 +63,7 @@
                     <div class="col-md-12">
                         <div class="x_panel">
                             <div class="x_title">
-                                <h2><i class="fa fa-bars"></i> <b>Operation Statistic</b></h2>
+                                <h2><i class="fa fa-bars"></i> <b>Alert Report</b></h2>
                                 <div class="clearfix"></div>
                             </div>
                             <div class="x_content">
@@ -72,7 +72,7 @@
                                     <ul id="myTab" class="nav nav-tabs bar_tabs" role="tablist">
                                         <li role="presentation" class="active"><a href="#tab_content1" id="list-tab"
                                                                                   role="tab" data-toggle="tab"><i
-                                                        class="fa fa-list-alt"></i> <b>Mileage Report</b></a>
+                                                        class="fa fa-list-alt"></i> <b> Alert Report</b></a>
                                         </li>
                                     </ul>
                                     <div id="myTabContent" class="tab-content">
@@ -89,93 +89,47 @@
                                                             <div class="form-group">
                                                                 <div class="form-inline">
                                                                     <div class="col-md-12">
-                                                                        <div class="radio-inline">
-                                                                            <label>
-                                                                                <input type="radio" name="optionsRadios"
-                                                                                       id="optionsRadios1"
-                                                                                       value="option1" checked>
-                                                                                Daily Details
-                                                                            </label>
-                                                                        </div>
-                                                                        <div class="radio-inline">
-                                                                            <label>
-                                                                                <input type="radio" name="optionsRadios"
-                                                                                       id="optionsRadios2"
-                                                                                       value="option2">
-                                                                                Periode Details | Device name :
-                                                                            </label>
-                                                                        </div>
-                                                                        <select class="form-control" name="device_name">
-                                                                            <option value="" disabled selected>Select
-                                                                                Device
-                                                                            </option>
-                                                                        </select>
+                                                                        <label>
+                                                                            Select device name :
+                                                                            <select class="form-control"
+                                                                                    name="device_name">
+                                                                                <option value="" disabled selected>
+                                                                                    Select Device
+                                                                                </option>
+                                                                            </select>
+                                                                        </label>
+                                                                        <label>
+                                                                            Select Alert Type :
+                                                                            <select class="form-control"
+                                                                                    name="device_name">
+                                                                                <option value="" disabled selected>
+                                                                                    Select Device
+                                                                                </option>
+                                                                            </select>
+                                                                        </label>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="form-group">
                                                                 <div class="form-inline">
-
-                                                                    <label> Date : </label>
-                                                                    <input type="text" name="visit_date"
-                                                                           id="visit_date_edit" class="form-control"
-                                                                           placeholder="e.g. 12-08-2018 - 21-08-2018"
-                                                                           required>
-                                                                    <label> Fuel Consumption : </label>
-                                                                    <input type="text" name="mileage"
-                                                                           class="form-control" placeholder="0"
-                                                                           required>
+                                                                    <div class="col-md-12">
+                                                                        <label>
+                                                                            Select date to check :
+                                                                        </label>
+                                                                        <input type="text" name="visit_date"
+                                                                               id="visit_date_edit" class="form-control"
+                                                                               placeholder="e.g. 12-08-2018 - 21-08-2018"
+                                                                               required>
+                                                                        <button type="submit" class="btn btn-warning">
+                                                                            check
+                                                                        </button>
+                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="form-group">
-                                                                <div class="form-inline">
-
-                                                                    <input type="submit" value="check"
-                                                                           class="btn btn-warning">
-                                                                    <button class="btn btn-info">Batch Download</button>
-                                                                </div>
-                                                            </div>
-                                                        </div><!-- </div> col-md-12 -->
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div><!-- /DIV COL-MD-12 (1) -->
-                                            <div class="col-md-12 col-xs-12">
-                                                <div class="x_panel">
-                                                    <div class="x_content">
-                                                        <div class="col-md-12">
-                                                            <div class="form-group">
-                                                                <div class="row tile_count">
-                                                                    <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
-                                                                        <span class="count_top"> <b> Device Quantity </b> </span>
-                                                                        <div class="count"><i
-                                                                                    class="fa fa-map-marker"></i> 0
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
-                                                                        <span class="count_top"> <b> Total Speeding (Times) </b> </span>
-                                                                        <div class="count"><i
-                                                                                    class="fa fa-tachometer"></i> 12
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
-                                                                        <span class="count_top"> <b>Total Parking [ Times ] </b> </span>
-                                                                        <div class="count"><i class="fa fa-cab"></i> 0
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
-                                                                        <span class="count_top"> <b>Total fuel</b> </span>
-                                                                        <div class="count"><i class="fa fa-tint"></i>
-                                                                            4,2 L
-                                                                        </div>
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div><!-- DIV COL-MD-6 (1) -->
-
-                                                    </div><!-- /DIV x_CONTENT -->
-                                                </div><!-- DIV X_PANEL -->
-                                            </div><!-- /DIV COL-MD-8 -->
+                                            </div><!-- /DIV COL-MD-6 (1) -->
 
 
                                             <div class="col-md-12">
@@ -189,52 +143,81 @@
                                                                     <thead>
                                                                     <tr>
                                                                         <th class="text-center"
-                                                                            style="vertical-align: middle;">no
-                                                                        </th>
-                                                                        <th class="text-center"
-                                                                            style="vertical-align: middle;">Device Name
+                                                                            style="vertical-align: middle;">No.
                                                                         </th>
                                                                         <th class="text-center"
                                                                             style="vertical-align: middle;">Date
                                                                         </th>
                                                                         <th class="text-center"
-                                                                            style="vertical-align: middle;">Mileage (km)
+                                                                            style="vertical-align: middle;">Vibration
+                                                                        </th>
+                                                                        <th class="text-center"
+                                                                            style="vertical-align: middle;">External
+                                                                            power disconnect
+                                                                        </th>
+                                                                        <th class="text-center"
+                                                                            style="vertical-align: middle;">Low Battery
+                                                                        </th>
+                                                                        <th class="text-center"
+                                                                            style="vertical-align: middle;">SOS
+                                                                        </th>
+                                                                        <th class="text-center"
+                                                                            style="vertical-align: middle;">GEOfence out
+                                                                        </th>
+                                                                        <th class="text-center"
+                                                                            style="vertical-align: middle;">GEOfence in
                                                                         </th>
                                                                         <th class="text-center"
                                                                             style="vertical-align: middle;">Speeding
-                                                                            (Times)
                                                                         </th>
                                                                         <th class="text-center"
-                                                                            style="vertical-align: middle;">Parking
-                                                                            (Times)
+                                                                            style="vertical-align: middle;">Towing
                                                                         </th>
                                                                         <th class="text-center"
-                                                                            style="vertical-align: middle;">Fuel (L)
+                                                                            style="vertical-align: middle;">Engine ON
+                                                                        </th>
+                                                                        <th class="text-center"
+                                                                            style="vertical-align: middle;">Engine OFF
                                                                         </th>
                                                                     </tr>
                                                                     </thead>
                                                                     <tbody>
                                                                     <tr>
                                                                         <td class="text-center"
-                                                                            style="vertical-align: middle;">1
+                                                                            style="vertical-align: middle;">-
                                                                         </td>
                                                                         <td class="text-center"
-                                                                            style="vertical-align: middle;">Raspberry pi
+                                                                            style="vertical-align: middle;">-
                                                                         </td>
                                                                         <td class="text-center"
-                                                                            style="vertical-align: middle;">0
+                                                                            style="vertical-align: middle;">-
                                                                         </td>
                                                                         <td class="text-center"
-                                                                            style="vertical-align: middle;">0
+                                                                            style="vertical-align: middle;">-
                                                                         </td>
                                                                         <td class="text-center"
-                                                                            style="vertical-align: middle;">0
+                                                                            style="vertical-align: middle;">-
                                                                         </td>
                                                                         <td class="text-center"
-                                                                            style="vertical-align: middle;">0
+                                                                            style="vertical-align: middle;">-
                                                                         </td>
                                                                         <td class="text-center"
-                                                                            style="vertical-align: middle;">0
+                                                                            style="vertical-align: middle;">-
+                                                                        </td>
+                                                                        <td class="text-center"
+                                                                            style="vertical-align: middle;">-
+                                                                        </td>
+                                                                        <td class="text-center"
+                                                                            style="vertical-align: middle;">-
+                                                                        </td>
+                                                                        <td class="text-center"
+                                                                            style="vertical-align: middle;">-
+                                                                        </td>
+                                                                        <td class="text-center"
+                                                                            style="vertical-align: middle;">-
+                                                                        </td>
+                                                                        <td class="text-center"
+                                                                            style="vertical-align: middle;">-
                                                                         </td>
 
                                                                     </tr>
@@ -242,7 +225,6 @@
                                                                 </table>
                                                             </div>
                                                         </div>
-
                                                         <!-- <div class="ln_solid"></div> -->
                                                         <div class="form-group">
                                                             <div class="col-md-8 col-md-offset-4">

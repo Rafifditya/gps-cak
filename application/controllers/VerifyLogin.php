@@ -37,7 +37,7 @@ class VerifyLogin extends CI_Controller
             $this->load->view('v_login');
         } else {
             //Jika berhasil user akan di arahkan ke private area
-            redirect('home', 'refresh');
+            redirect('Home', 'refresh');
         }
     }
 

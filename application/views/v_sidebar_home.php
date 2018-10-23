@@ -7,7 +7,6 @@
 <!-- sidebar menu -->
 <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
   <div class="menu_section">
-    <h3><i class="fa fa-desktop"></i>Monitor</h3>
     <ul class="nav side-menu">
       <li>
           <div class=" form-group top_search">

@@ -31,6 +31,9 @@
 
     <!-- Custom Theme Style -->
     <link href="<?php echo site_url(); ?>assets/build/css/custom.min.css" rel="stylesheet">
+
+    <!--date example fot chart-->
+    <script src="<?php echo site_url();?>assets/build/js/utils.js"></script>
 </head>
 
 <body class="nav-md">
@@ -188,83 +191,88 @@
                                             <div class="col-md-12 col-xs-12">
                                                 <div class="x_panel">
                                                     <div class="x_content">
-                                                        <canvas class="flot-base"
-                                                                style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 850px; height: 280px;"
-                                                                width="850" height="280"></canvas>
-                                                        <div class="flot-text"
-                                                             style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; font-size: smaller; color: rgb(84, 84, 84);">
-                                                            <div class="flot-x-axis flot-x1-axis xAxis x1Axis"
-                                                                 style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;">
-                                                                <div style="position: absolute; max-width: 106px; top: 263px; left: 47px; text-align: center;"
-                                                                     class="flot-tick-label tickLabel">Jan 01
-                                                                </div>
-                                                                <div style="position: absolute; max-width: 106px; top: 263px; left: 182px; text-align: center;"
-                                                                     class="flot-tick-label tickLabel">Jan 02
-                                                                </div>
-                                                                <div style="position: absolute; max-width: 106px; top: 263px; left: 316px; text-align: center;"
-                                                                     class="flot-tick-label tickLabel">Jan 03
-                                                                </div>
-                                                                <div style="position: absolute; max-width: 106px; top: 263px; left: 451px; text-align: center;"
-                                                                     class="flot-tick-label tickLabel">Jan 04
-                                                                </div>
-                                                                <div style="position: absolute; max-width: 106px; top: 263px; left: 586px; text-align: center;"
-                                                                     class="flot-tick-label tickLabel">Jan 05
-                                                                </div>
-                                                                <div style="position: absolute; max-width: 106px; top: 263px; left: 721px; text-align: center;"
-                                                                     class="flot-tick-label tickLabel">Jan 06
-                                                                </div>
-                                                            </div>
-                                                            <div class="flot-y-axis flot-y1-axis yAxis y1Axis"
-                                                                 style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;">
-                                                                <div style="position: absolute; top: 250px; left: 13px; text-align: right;"
-                                                                     class="flot-tick-label tickLabel">0
-                                                                </div>
-                                                                <div style="position: absolute; top: 231px; left: 7px; text-align: right;"
-                                                                     class="flot-tick-label tickLabel">10
-                                                                </div>
-                                                                <div style="position: absolute; top: 212px; left: 7px; text-align: right;"
-                                                                     class="flot-tick-label tickLabel">20
-                                                                </div>
-                                                                <div style="position: absolute; top: 192px; left: 7px; text-align: right;"
-                                                                     class="flot-tick-label tickLabel">30
-                                                                </div>
-                                                                <div style="position: absolute; top: 173px; left: 7px; text-align: right;"
-                                                                     class="flot-tick-label tickLabel">40
-                                                                </div>
-                                                                <div style="position: absolute; top: 154px; left: 7px; text-align: right;"
-                                                                     class="flot-tick-label tickLabel">50
-                                                                </div>
-                                                                <div style="position: absolute; top: 135px; left: 7px; text-align: right;"
-                                                                     class="flot-tick-label tickLabel">60
-                                                                </div>
-                                                                <div style="position: absolute; top: 115px; left: 7px; text-align: right;"
-                                                                     class="flot-tick-label tickLabel">70
-                                                                </div>
-                                                                <div style="position: absolute; top: 96px; left: 7px; text-align: right;"
-                                                                     class="flot-tick-label tickLabel">80
-                                                                </div>
-                                                                <div style="position: absolute; top: 77px; left: 7px; text-align: right;"
-                                                                     class="flot-tick-label tickLabel">90
-                                                                </div>
-                                                                <div style="position: absolute; top: 58px; left: 1px; text-align: right;"
-                                                                     class="flot-tick-label tickLabel">100
-                                                                </div>
-                                                                <div style="position: absolute; top: 38px; left: 1px; text-align: right;"
-                                                                     class="flot-tick-label tickLabel">110
-                                                                </div>
-                                                                <div style="position: absolute; top: 19px; left: 1px; text-align: right;"
-                                                                     class="flot-tick-label tickLabel">120
-                                                                </div>
-                                                                <div style="position: absolute; top: 0px; left: 1px; text-align: right;"
-                                                                     class="flot-tick-label tickLabel">130
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <canvas class="flot-overlay"
-                                                                style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 850px; height: 280px;"
-                                                                width="850" height="280">
+                                                        <div>
+                                                            <canvas id="canvas"></canvas>
+                                                            <script>
+                                                                var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+                                                                var config = {
+                                                                    type: 'line',
+                                                                    data: {
+                                                                        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                                                                        datasets: [{
+                                                                            label: 'Fuel Consumption (L)',
+                                                                            backgroundColor: window.chartColors.red,
+                                                                            borderColor: window.chartColors.red,
+                                                                            data: [
+                                                                                randomScalingFactor(),
+                                                                                randomScalingFactor(),
+                                                                                randomScalingFactor(),
+                                                                                randomScalingFactor(),
+                                                                                randomScalingFactor(),
+                                                                                randomScalingFactor(),
+                                                                                randomScalingFactor()
+                                                                            ],
+                                                                            fill: false,
+                                                                        }, {
+                                                                            label: 'Mileage (Km)',
+                                                                            fill: false,
+                                                                            backgroundColor: window.chartColors.blue,
+                                                                            borderColor: window.chartColors.blue,
+                                                                            data: [
+                                                                                randomScalingFactor(),
+                                                                                randomScalingFactor(),
+                                                                                randomScalingFactor(),
+                                                                                randomScalingFactor(),
+                                                                                randomScalingFactor(),
+                                                                                randomScalingFactor(),
+                                                                                randomScalingFactor()
+                                                                            ],
+                                                                        }]
+                                                                    },
+                                                                    options: {
+                                                                        responsive: true,
+                                                                        title: {
+                                                                            display: true,
+                                                                            text: 'Fuel Consumption Chart'
+                                                                        },
+                                                                        tooltips: {
+                                                                            mode: 'index',
+                                                                            intersect: false,
+                                                                        },
+                                                                        hover: {
+                                                                            mode: 'nearest',
+                                                                            intersect: true
+                                                                        },
+                                                                        scales: {
+                                                                            xAxes: [{
+                                                                                display: true,
+                                                                                scaleLabel: {
+                                                                                    display: true,
+                                                                                    labelString: 'Month'
+                                                                                }
+                                                                            }],
+                                                                            yAxes: [{
+                                                                                display: true,
+                                                                                scaleLabel: {
+                                                                                    display: true,
+                                                                                    labelString: 'Value'
+                                                                                }
+                                                                            }]
+                                                                        }
+                                                                    }
+                                                                };
 
-                                                        </canvas>
+                                                                window.onload = function() {
+                                                                    var ctx = document.getElementById('canvas').getContext('2d');
+                                                                    window.myLine = new Chart(ctx, config);
+                                                                };
+
+
+                                                                var colorNames = Object.keys(window.chartColors);
+
+                                                            </script>
+
+                                                        </div>
                                                     </div><!-- /DIV x_CONTENT -->
                                                 </div><!-- DIV X_PANEL -->
                                             </div><!-- /DIV COL-MD-8 -->
@@ -399,22 +407,12 @@
 <!-- bootstrap-daterangepicker -->
 <script src="<?php echo site_url(); ?>assets/production/js/moment/moment.min.js"></script>
 <script src="<?php echo site_url(); ?>assets/production/js/datepicker/daterangepicker.js"></script>
-<!--skyicon-->
-<script src="<?php echo site_url(); ?>assets/vendors/skycons/skycons.js"></script>
-<!-- Flot -->
-<script src="<?php echo site_url(); ?>assets/vendors/Flot/jquery.flot.js"></script>
-<script src="<?php echo site_url(); ?>assets/vendors/Flot/jquery.flot.pie.js"></script>
-<script src="<?php echo site_url(); ?>assets/vendors/Flot/jquery.flot.time.js"></script>
-<script src="<?php echo site_url(); ?>assets/vendors/Flot/jquery.flot.stack.js"></script>
-<script src="<?php echo site_url(); ?>assets/vendors/Flot/jquery.flot.resize.js"></script>
-<!-- Flot plugins -->
-<script src="<?php echo site_url(); ?>assets/vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
-<script src="<?php echo site_url(); ?>assets/vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
-<script src="<?php echo site_url(); ?>assets/vendors/flot.curvedlines/curvedLines.js"></script>
 
 <!-- Select2 -->
 <script src="<?php echo site_url(); ?>assets/vendors/select2/dist/js/select2.full.min.js"></script>
 
+<!--Chart.js-->
+<script src="<?php echo site_url(); ?>assets/vendors/Chart.js/dist/chart.min.js"></script>
 
 <!-- validator -->
 <script src="<?php echo site_url(); ?>assets/vendors/validator/validator.min.js"></script>
@@ -500,6 +498,9 @@
 </script>
 <!-- /bootstrap-daterangepicker -->
 
+
+<!--chart js-->
+<!--/chartjs-->
 
 <!-- Select2 -->
 <script>

@@ -115,7 +115,7 @@
 														            </div>
 														            <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
 														              <span class="count_top"> <b> Total Mileage </b> </span>
-														              <div class="count green"><i class="fa fa-map-marker"></i> 123.50 km</div>
+														              <div class="count green"><i class="fa fa-map-marker"></i> 123.50 </div>
 																					<span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>7% </i> From last Week</span>
 														            </div>
 														            <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_count">

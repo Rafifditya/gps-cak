@@ -800,6 +800,18 @@
 		<script src="<?php echo site_url(); ?>assets/vendors/echarts/dist/echarts.min.js"></script>
 		<!-- Custom Theme Scripts -->
 		<script src="<?php echo site_url(); ?>assets/build/js/custom.min.js"></script>
+    <script src="<?php echo site_url();?>assets/vendors/select2/dist/js/select2.full.min.js"></script>
+    <!-- Select2 -->
+    <script>
+        $(document).ready(function() {
+            $(".select2_multiple").select2({
+                maximumSelectionLength: 1,
+                placeholder: " Select audit requrement",
+                allowClear: true
+            });
+        });
+    </script>
+    <!-- /Select2 -->
 
 <!-- ECharts -->
 
